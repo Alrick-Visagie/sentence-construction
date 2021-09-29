@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace SentenceConstruction.Repository
 {
-    public class WordRepository
+    public class WordRepository : IWordRepository
     {
-        public void GetWordList() 
-        { 
-            
+        public void GetWordList()
+        {
+
         }
     }
 }

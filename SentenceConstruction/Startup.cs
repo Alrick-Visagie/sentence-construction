@@ -28,7 +28,9 @@ namespace SentenceConstruction
                 item => item.UseSqlServer(Configuration.GetConnectionString("Database")));
             services.AddScoped<ISentenceService, SentenceService>();
             services.AddScoped<IWordService, WordService>();
-           
+            services.AddScoped<ISentenceRepository, SentenceRepository>();
+            services.AddScoped<IWordRepository, WordRepository>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

@@ -18,7 +18,7 @@ namespace SentenceConstruction.Repository
             modelBuilder.Entity<Words>().HasData(
                 new Words
                 {
-                    ID = "1",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Nouns",
                     Word = "Actor,Gold,Painting,Advertisement,Grass,Parrot,Afternoon,Greece," +
                                                              "Pencil,Airport,Guitar,Piano,Ambulance,Hair,Pillow,Animal,Hamburger," +
@@ -27,7 +27,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "2",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Verbs",
                     Word = "to ask,asked,ask,will ask,to be,was,am,will be,to become,became,become," +
                                                              "will become,to bring,brought,bring,will bring,to build,built,build,will build," +
@@ -37,7 +37,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "3",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Adjectives",
                     Word = "adorable,adventurous,aggressive,agreeable,alert,alive,amused,angry,annoyed," +
                                                                   "annoying,anxious,arrogant,ashamed,attractive,average,awful,bad,beautiful," +
@@ -47,7 +47,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "4",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Adverbs",
                     Word = "absentmindedly,adoringly,awkwardly,beautifully,briskly,brutally,carefully," +
                                                                "cheerfully,competitively,eagerly,effortlessly,extravagantly,girlishly,gracefully," +
@@ -58,7 +58,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "5",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Pronouns",
                     Word = "I,you,he,she,it,we,they,me,him,her,us,them,who,whom,which,what," +
                                                                 "whose,whoever,whatever,whichever,whomever,this,that,these,those,myself," +
@@ -67,7 +67,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "6",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Prepositions",
                     Word = "aboard,about,above,according to,across,after,against,ahead of,along," +
                                                                     "amid,amidst,among,around,as,as far as,as of,aside from,at,athwart,atop," +
@@ -77,7 +77,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "7",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Conjunctions",
                     Word = "After,As,As long as,As soon as,As though,Before,Even if,If,If when,Inasmuch," +
                                                                     "Just as,Now,Now that,Once,Provided that,Since,Supposing,That,Though,Until," +
@@ -90,7 +90,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "8",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Determiners",
                     Word = "a,a few,a little,all,an,another,any,anybody,anyone,anything,anywhere,both," +
                                                                    "certain,each,either,enough,every,everybody,everyone,everything,everywhere," +
@@ -101,7 +101,7 @@ namespace SentenceConstruction.Repository
 
                 new Words
                 {
-                    ID = "9",
+                    ID = Guid.NewGuid().ToString(),
                     Name = "Exclamations",
                     Word = "Shh,Please,Psst,Shoo,Hey,Oh,Yo,Here,Ahem,Encore,There,Hush,Scat,No,Silence," +
                                                                     "Enough'Yuck,Eww,Aww,Ouch,Oh,Ah,Ugh,Phew,Phooey,Rats,Yippee,Blah,Brr,Eek," +
@@ -111,12 +111,12 @@ namespace SentenceConstruction.Repository
 
             //Adding some Sentences to display
             modelBuilder.Entity<Sentences>().HasData(
-                new Sentences { ID = "1", Sentence = "Actor asked absentmindedly." },
-                new Sentences { ID = "2", Sentence = "He said afternoon." },
-                new Sentences { ID = "3", Sentence = "She asked him if he was angry." });
+                new Sentences { ID = Guid.NewGuid().ToString(), Sentence = "Actor asked absentmindedly." },
+                new Sentences { ID = Guid.NewGuid().ToString(), Sentence = "He said afternoon." },
+                new Sentences { ID = Guid.NewGuid().ToString(), Sentence = "She asked him if he was angry." });
         }
 
-        DbSet<Sentences> Sentences { get; set; }
-        DbSet<Words> Words { get; set; }
+        public DbSet<Sentences> Sentences { get; set; }
+        public DbSet<Words> Words { get; set; }
     }
 }
