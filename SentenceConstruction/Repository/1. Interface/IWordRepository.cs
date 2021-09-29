@@ -1,7 +1,10 @@
-﻿namespace SentenceConstruction.Repository
+﻿using SentenceConstruction.Repository.Models;
+using System.Collections.Generic;
+
+namespace SentenceConstruction.Repository
 {
     public interface IWordRepository
     {
-        void GetWordList();
+        IEnumerable<Words> GetWordList();
     }
 }

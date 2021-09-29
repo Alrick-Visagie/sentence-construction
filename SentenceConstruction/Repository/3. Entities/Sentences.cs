@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SentenceConstruction.Repository.Models
 {
@@ -10,6 +6,7 @@ namespace SentenceConstruction.Repository.Models
     {
         [Key]
         public string ID { get; set; }
+        [Required]
         public string Sentence { get; set; }
     }
 }

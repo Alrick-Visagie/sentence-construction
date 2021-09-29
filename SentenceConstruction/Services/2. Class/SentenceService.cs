@@ -1,7 +1,6 @@
 ﻿using SentenceConstruction.Mappers;
 using SentenceConstruction.Models;
 using SentenceConstruction.Repository;
-using System;
 using System.Collections.Generic;
 
 namespace SentenceConstruction.Serices

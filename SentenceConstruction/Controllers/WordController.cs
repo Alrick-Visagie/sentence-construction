@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using SentenceConstruction.Models;
+using SentenceConstruction.Serices;
 
 namespace SentenceConstruction.Controllers
 {
@@ -11,5 +8,16 @@ namespace SentenceConstruction.Controllers
     [ApiController]
     public class WordController : ControllerBase
     {
+        private readonly IWordService _wordService;
+        public WordController(IWordService wordService)
+        {
+            _wordService = wordService;
+        }
+
+        [HttpGet]
+        public WordDto Get()
+        {
+            return _wordService.GetWords();
+        }
     }
 }

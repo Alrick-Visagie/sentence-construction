@@ -1,15 +1,19 @@
-﻿using System;
+﻿using SentenceConstruction.Repository.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SentenceConstruction.Repository
 {
     public class WordRepository : IWordRepository
     {
-        public void GetWordList()
+        private readonly SentenceConstructionDbContext _sentenceConstructionDbContext;
+        public WordRepository(SentenceConstructionDbContext sentenceConstructionDbContex)
         {
-
+            _sentenceConstructionDbContext = sentenceConstructionDbContex;
+        }
+        public IEnumerable<Words> GetWordList()
+        {
+            return _sentenceConstructionDbContext.Words.AsEnumerable();
         }
     }
 }
