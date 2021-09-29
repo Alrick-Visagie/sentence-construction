@@ -11,7 +11,7 @@ namespace SentenceConstruction.Models
         public List<string> Pronouns { get; set; }
         public List<string> Prepositions { get; set; }
         public List<string> Conjunctions { get; set; }
-        public List<string> Determiner { get; set; }
+        public List<string> Determiners { get; set; }
         public List<string> Exclamations { get; set; }
     }
 }
