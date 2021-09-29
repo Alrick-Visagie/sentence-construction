@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace SentenceConstruction.Repository.Models
 {
-    public class WordEntity
+    public class Sentences
     {
         public string ID { get; set; }
-        public string Name { get; set; }
-        public string Word { get; set; }
+        public string Sentence { get; set; }
     }
 }
