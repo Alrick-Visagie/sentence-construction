@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Currently Saved Sentences</h1>
+
+<p *ngIf="!sentenceList"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="sentenceList">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Sentence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sentence of sentenceList">
+      <td>{{ sentence.id }}</td>
+      <td>{{ sentence.sentence }}</td>
+    </tr>
+  </tbody>
+</table>

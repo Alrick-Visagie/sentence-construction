@@ -15,14 +15,14 @@ namespace SentenceConstruction.Controllers
             _sentenceService = sentenceService;
         }
 
-        [HttpGet]
-        public List<SentenceDto> Get()
+        [HttpGet("GetSentences")]
+        public List<SentenceDto> GetSentences()
         {
             return _sentenceService.GetSentences();
         }
 
-        [HttpPost]
-        public void Save(SentenceDto sentence)
+        [HttpPost("SaveSentences")]
+        public void SaveSentences(SentenceDto sentence)
         {
              _sentenceService.SaveSentence(sentence);
         }

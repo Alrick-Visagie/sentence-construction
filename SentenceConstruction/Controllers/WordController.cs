@@ -14,8 +14,8 @@ namespace SentenceConstruction.Controllers
             _wordService = wordService;
         }
 
-        [HttpGet]
-        public WordDto Get()
+        [HttpGet("GetWords")]
+        public WordDto GetWords()
         {
             return _wordService.GetWords();
         }

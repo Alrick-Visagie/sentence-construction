@@ -12,50 +12,32 @@ namespace SentenceConstruction.Mappers
 
             foreach (var word in words) 
             {
-                if (word.Name == "Nouns")
-                {
+                if (word.Name == nameof(WordListType.Nouns))
                     result.Nouns = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Verbs")
-                {
+                if (word.Name == nameof(WordListType.Verbs))
                     result.Verbs = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Adjectives")
-                {
+                if (word.Name == nameof(WordListType.Adjectives))
                     result.Adjectives = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Adverbs") 
-                {
+                if (word.Name == nameof(WordListType.Adverbs)) 
                     result.Adverbs = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Pronouns")
-                {
+                if (word.Name == nameof(WordListType.Pronouns))
                     result.Pronouns = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Prepositions")
-                {
+                if (word.Name == nameof(WordListType.Prepositions))
                     result.Prepositions = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Conjunctions")
-                {
+                if (word.Name == nameof(WordListType.Conjunctions))
                     result.Conjunctions = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Determiners")
-                {
+                if (word.Name == nameof(WordListType.Determiners))
                     result.Determiners = new List<string>(word.Word.Split(','));
-                }
 
-                if (word.Name == "Exclamations")
-                {
+                if (word.Name == nameof(WordListType.Exclamations))
                     result.Exclamations = new List<string>(word.Word.Split(','));
-                }
             }
 
             return result;
