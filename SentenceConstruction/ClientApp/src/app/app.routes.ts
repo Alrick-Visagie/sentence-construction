@@ -1,20 +1,15 @@
 import { Routes } from "@angular/router";
-import { CounterComponent } from "./components/counter/counter.component";
-import { HomeComponent } from "./components/home/home.component";
 import {SentenceComponent} from "./components/sentence/sentence.component";
+import {CreateSentenceComponent} from "./components/create-sentence/create-sentence.component";
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: SentenceComponent,
     pathMatch: 'full'
   },
   {
-    path: 'counter',
-    component: CounterComponent
-  },
-  {
-    path: 'sentence',
-    component: SentenceComponent
-  },
+    path: 'create-sentence',
+    component: CreateSentenceComponent
+  }
 ];
