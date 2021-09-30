@@ -25,4 +25,12 @@ export class SentenceService {
 
     return this.httpClient.post<void>(`${this.url}/SaveSentence`, body);
   }
+
+  removeSentence(sentenceId: string): Observable<void>{
+    const params = {
+      sentenceId: sentenceId
+    };
+
+    return this.httpClient.delete<void>(`${this.url}/DeleteSentence`, {params});
+  }
 }

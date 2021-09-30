@@ -21,10 +21,16 @@ namespace SentenceConstruction.Controllers
             return _sentenceService.GetSentences();
         }
 
-        [HttpPost("SaveSentences")]
-        public void SaveSentences(SentenceDto sentence)
+        [HttpPost("SaveSentence")]
+        public void SaveSentence(SentenceDto sentence)
         {
              _sentenceService.SaveSentence(sentence);
+        }
+        
+        [HttpDelete("DeleteSentence")]
+        public void DeleteSentence([FromQuery]string sentenceId)
+        {
+            _sentenceService.DeleteSentence(sentenceId);
         }
     }
 }

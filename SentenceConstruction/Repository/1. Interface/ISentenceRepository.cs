@@ -7,5 +7,6 @@ namespace SentenceConstruction.Repository
     {
         IEnumerable<Sentences> GetSentenceList();
         void SaveSentence(Sentences sentence);
+        void DeleteSentence(string sentenceId);
     }
 }

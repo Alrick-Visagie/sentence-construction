@@ -22,6 +22,12 @@ export class SentenceComponent implements OnInit, OnDestroy {
     )
   }
 
+  removeSentence(sentenceId: string) {
+    if(sentenceId !== null) {
+      this.sentenceService.removeSentence(sentenceId)
+        .subscribe();
+    }
+  }
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

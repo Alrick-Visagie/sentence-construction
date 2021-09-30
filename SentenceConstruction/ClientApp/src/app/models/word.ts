@@ -4,8 +4,8 @@ export interface Word {
   adjectives : string[];
   adverbs : string[];
   pronouns : string[];
-  Prepositions : string[];
-  Conjunctions : string[];
+  prepositions : string[];
+  conjunctions : string[];
   determiners : string[];
-  Exclamations : string[];
+  exclamations : string[];
 }

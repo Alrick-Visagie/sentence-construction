@@ -24,5 +24,10 @@ namespace SentenceConstruction.Serices
             var result = SentenceMapper.Map(sentence);
             _sentenceRepository.SaveSentence(result);
         }
+
+        public void DeleteSentence(string sentenceId)
+        {
+            _sentenceRepository.DeleteSentence(sentenceId);
+        }
     }
 }

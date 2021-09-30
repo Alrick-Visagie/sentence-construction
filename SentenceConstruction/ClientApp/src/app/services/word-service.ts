@@ -11,10 +11,10 @@ export class WordService {
   readonly url: string;
 
   constructor(private httpClient: HttpClient) {
-    this.url = `${environment.apiUrl}/words`;
+    this.url = `${environment.apiUrl}/word`;
   }
 
-  getWords(): Observable<Word[]> {
-    return this.httpClient.get<Word[]>(`${this.url}/GetWords`);
+  getWords(): Observable<Word> {
+    return this.httpClient.get<Word>(`${this.url}/GetWords`);
   }
 }

@@ -21,5 +21,12 @@ namespace SentenceConstruction.Repository
             _sentenceConstructionDbContext.Sentences.Add(sentence);
             _sentenceConstructionDbContext.SaveChanges();
         }
+
+        public void DeleteSentence(string sentenceId)
+        {
+            var result = _sentenceConstructionDbContext.Sentences.Find(sentenceId);
+            _sentenceConstructionDbContext.Sentences.Remove(result);
+            _sentenceConstructionDbContext.SaveChanges();
+        }
     }
 }

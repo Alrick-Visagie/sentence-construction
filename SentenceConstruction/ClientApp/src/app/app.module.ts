@@ -8,13 +8,15 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { SentenceComponent } from './components/sentence/sentence.component';
 import { routes } from './app.routes';
 import {CreateSentenceComponent} from "./components/create-sentence/create-sentence.component";
+import {WordItemComponent} from "./components/word-item/word-item.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     SentenceComponent,
-    CreateSentenceComponent
+    CreateSentenceComponent,
+    WordItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

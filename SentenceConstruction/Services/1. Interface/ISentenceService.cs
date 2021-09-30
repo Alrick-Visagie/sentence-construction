@@ -7,5 +7,6 @@ namespace SentenceConstruction.Serices
     {
         List<SentenceDto> GetSentences();
         void SaveSentence(SentenceDto sentence);
+        void DeleteSentence(string sentenceId);
     }
 }
