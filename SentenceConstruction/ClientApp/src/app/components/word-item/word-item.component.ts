@@ -3,11 +3,11 @@
 @Component({
   selector: 'word-item',
   template: `
-            <span style="border: 1px solid #8e8e8e; margin-right: 5px; margin-bottom: 5px; border-radius: 10%; padding:1px; box-shadow: 0 0 40px "
-                  (click)="wordSelected($event)">
+            <span class="item" (click)="wordSelected($event)">
               {{word}}
             </span>
-  `
+  `,
+  styleUrls:['./word-item.component.css']
 })
 
 export class WordItemComponent{
