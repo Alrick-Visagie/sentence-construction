@@ -2,9 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SentenceConstruction.Repository;
+using SentenceConstruction.Serices;
 
 namespace SentenceConstruction
 {
@@ -21,6 +24,13 @@ namespace SentenceConstruction
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<SentenceConstructionDbContext>(
+                item => item.UseSqlServer(Configuration.GetConnectionString("Database")));
+            services.AddScoped<ISentenceService, SentenceService>();
+            services.AddScoped<IWordService, WordService>();
+            services.AddScoped<ISentenceRepository, SentenceRepository>();
+            services.AddScoped<IWordRepository, WordRepository>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
